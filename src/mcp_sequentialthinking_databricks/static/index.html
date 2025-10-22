@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Sequential Thinking Tools - Databricks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #764ba2;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .features {
+            text-align: left;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .features h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+        
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .endpoint {
+            background: #e8eaf6;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-align: left;
+        }
+        
+        .endpoint code {
+            background: #fff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #764ba2;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🧠💡</div>
+        <h1>MCP Sequential Thinking Tools</h1>
+        <p class="subtitle">Running on Databricks Apps</p>
+        
+        <p class="description">
+            A Model Context Protocol (MCP) server that combines sequential thinking with 
+            intelligent tool suggestions. This server helps break down complex problems into 
+            manageable steps and provides confidence-scored recommendations for which tools 
+            to use at each stage.
+        </p>
+        
+        <div class="status">
+            <span class="status-indicator"></span>
+            <span>Server Running</span>
+        </div>
+        
+        <div class="features">
+            <h2>✨ Key Features</h2>
+            <ul>
+                <li>Dynamic and reflective problem-solving through sequential thoughts</li>
+                <li>Flexible thinking process that adapts and evolves</li>
+                <li>Support for branching and revision of thoughts</li>
+                <li>LLM-driven intelligent tool recommendations</li>
+                <li>Confidence scoring for tool suggestions</li>
+                <li>Detailed rationale for tool recommendations</li>
+                <li>Step tracking with expected outcomes</li>
+                <li>Progress monitoring with previous and remaining steps</li>
+                <li>Alternative tool suggestions for each step</li>
+                <li>Memory management with configurable history limits</li>
+            </ul>
+        </div>
+        
+        <div class="endpoint">
+            <strong>🔗 MCP Endpoint:</strong><br>
+            <code>/mcp/</code>
+            <p style="margin-top: 10px; color: #666; font-size: 0.9em;">
+                Use this endpoint with Streamable HTTP transport for MCP connections.
+                Don't forget the trailing slash!
+            </p>
+        </div>
+        
+        <div class="endpoint">
+            <strong>🏥 Health Check:</strong><br>
+            <code>/health</code>
+            <p style="margin-top: 10px; color: #666; font-size: 0.9em;">
+                Check the server status and version information.
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>
+                <strong>Version:</strong> 0.0.4<br>
+                <strong>Protocol:</strong> Model Context Protocol (MCP)<br>
+                <strong>Deployment:</strong> Databricks Apps
+            </p>
+            <p style="margin-top: 15px;">
+                For more information, visit the 
+                <a href="https://github.com/murtihash94/mcp-sequentialthinking-tools-databricks" target="_blank">
+                    GitHub repository
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
