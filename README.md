@@ -19,6 +19,27 @@ be appropriate.
 
 **🎯 Now deployable on Databricks Apps!** This version has been converted to a Python-based FastAPI application that can be easily deployed to Databricks.
 
+## 📚 Documentation
+
+- **[Quick Start Guide](QUICKSTART.md)** - Get deployed to Databricks in 15 minutes
+- **[Migration Guide](MIGRATION.md)** - Understand TypeScript vs Python implementations  
+- **[Testing Guide](TESTING.md)** - Comprehensive testing documentation
+- **[Full Documentation](#databricks-deployment)** - Detailed deployment instructions below
+
+## 🖼️ Web Interface
+
+Once deployed, the server provides a beautiful web interface:
+
+![MCP Sequential Thinking Tools Web Interface](https://github.com/user-attachments/assets/b120c387-cf72-4af5-8b2c-943b8105dbf9)
+
+The interface includes:
+- 🎨 Modern, responsive design
+- 📊 Real-time server status
+- 🔗 MCP endpoint information
+- 🏥 Health check endpoint
+- ✨ Complete feature list
+- 📝 Version and protocol information
+
 ## Features
 
 - 🤔 Dynamic and reflective problem-solving through sequential
