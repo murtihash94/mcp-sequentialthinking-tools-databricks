@@ -1,1 +1,1 @@
-command: ["python", "-m", "mcp_sequentialthinking_databricks.main"]
+command: ["uv", "run", "mcp-sequentialthinking-databricks"]
