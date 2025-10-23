@@ -187,7 +187,7 @@ databricks current-user me
 Configure in `app.yaml`:
 
 ```yaml
-command: ["uv", "run", "mcp-sequentialthinking-databricks"]
+command: ["python", "-m", "mcp_sequentialthinking_databricks.main"]
 env:
   - name: MAX_HISTORY_SIZE
     value: "2000"
