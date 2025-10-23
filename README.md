@@ -415,7 +415,7 @@ You can configure the server behavior using environment variables:
 To set environment variables in Databricks Apps, update the `app.yaml`:
 
 ```yaml
-command: ["uv", "run", "mcp-sequentialthinking-databricks"]
+command: ["python", "-m", "mcp_sequentialthinking_databricks.main"]
 env:
   - name: MAX_HISTORY_SIZE
     value: "2000"
